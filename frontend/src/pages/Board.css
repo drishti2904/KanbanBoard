@@ -1,0 +1,541 @@
+.board-page {
+  padding: 1rem;
+  background-color: #f9fafb;
+  min-height: 100vh;
+}
+
+.board-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.kanban-container {
+  display: flex;
+  justify-content: space-around;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.kanban-column {
+  background: rgb(237, 228, 228);
+  border-radius: 10px;
+  padding: 1rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  flex: 1 1 300px;
+  max-width: 400px;
+}
+
+.kanban-column h2 {
+  text-align: center;
+  border-bottom: 2px solid #667eea;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.kanban-tasks {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.task-card {
+  background: #f3f4f6;
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  transition: transform 0.2s ease;
+}
+
+.task-card:hover {
+  transform: scale(1.02);
+}
+
+.task-meta {
+  font-size: 0.85rem;
+  color: #555;
+  margin-top: 0.5rem;
+}
+
+
+.kanban-column {
+  background: #aee9f3;
+  border-radius: 10px;
+  padding: 1rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  flex: 1 1 300px;
+  max-width: 400px;
+  transition: background-color 0.2s;
+}
+
+.kanban-column:hover {
+  background-color: #eee6f7;
+}
+
+.task-card {
+  background: rgb(192, 235, 179);
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s;
+  cursor: grab;
+}
+
+.task-card:active {
+  cursor: grabbing;
+  transform: scale(1.03);
+}
+
+.new-task-form {
+  background: #e9b4f1;
+  border-radius: 8px;
+  padding: 1rem;
+  margin: 1rem auto;
+  max-width: 500px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.new-task-form form {
+  display: flex;
+  flex-direction: column;
+}
+
+.new-task-form input,
+.new-task-form select {
+  margin: 0.5rem 0;
+  padding: 0.5rem;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+.new-task-form button {
+  padding: 0.5rem;
+  background-color: #451e97;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 0.5rem;
+}
+
+.new-task-form button:hover {
+  background-color: #556cd6;
+}
+
+.error-text {
+  color: red;
+  margin-top: 0.5rem;
+}
+
+.board-input{
+    background-color: #ffffff;
+    color: black;
+}
+
+.activity-log {
+  background: #efd8f6;
+  margin-top: 2rem;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.activity-log h2 {
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.activity-log ul {
+  list-style: none;
+  padding: 0;
+}
+
+.activity-log li {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #eee;
+  font-size: 0.95rem;
+}
+
+/* new updated*/
+.board-layout {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.kanban-container {
+  flex: 2;
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto;
+}
+
+.activity-log {
+  flex: 1;
+  min-width: 300px;
+  background: #aee9f3;
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.activity-log h2 {
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.activity-log ul {
+  list-style: none;
+  padding: 0;
+}
+
+.activity-log li {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #eee;
+  font-size: 0.95rem;
+}
+
+.delete-button {
+  margin-top: 0.5rem;
+  background-color: #ff4d4d;
+  color: white;
+  border: none;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.delete-button:hover {
+  background-color: #e60000;
+}
+
+.task-card {
+  background: #fff;
+  border-radius: 8px;
+  padding: 12px;
+  margin-bottom: 10px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  cursor: grab;
+  transition: transform 0.2s ease;
+}
+
+.task-card:active {
+  cursor: grabbing;
+  transform: scale(1.02);
+}
+
+.task-card h3 {
+  margin-top: 0;
+  margin-bottom: 5px;
+}
+
+.task-meta {
+  font-size: 0.85rem;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.smart-assign-button,
+.delete-button {
+  background-color: #e74c3c;
+  border: none;
+  color: white;
+  padding: 6px 10px;
+  margin-right: 5px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  transition: background-color 0.2s ease;
+}
+
+.smart-assign-button {
+  background-color: #3498db;
+}
+
+.smart-assign-button:hover {
+  background-color: #2980b9;
+}
+
+.delete-button:hover {
+  background-color: #c0392b;
+}
+
+.new-task-form button {
+  background-color: #6A0DAD;
+  border: none;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.2s ease;
+}
+
+
+
+.error-text {
+  color: #e74c3c;
+  font-size: 0.9rem;
+  margin-top: 5px;
+}
+
+.logout-button {
+  background-color: #59118d;
+  border: none;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background-color 0.2s ease;
+}
+
+
+
+.kanban-column h2 {
+  border-bottom: 2px solid #ccc;
+  padding-bottom: 5px;
+  margin-bottom: 10px;
+}
+
+.kanban-tasks {
+  display: flex;
+  flex-direction: column;
+}
+
+
+/*%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%*/
+.board-page {
+  padding: 1rem;
+  background-color: #fff;
+  min-height: 100vh;
+}
+
+.board-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.board-header h1 {
+  color: #6A0DAD;
+  margin: 0;
+}
+
+.logout-button {
+  background-color: #6A0DAD;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.logout-button:hover {
+  background-color: #5c0aa8;
+}
+
+.board-layout {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.kanban-container {
+  flex: 2;
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto;
+}
+
+.kanban-column {
+  background: #e1cef8;
+  border-radius: 10px;
+  padding: 1rem;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+  flex: 1 1 300px;
+  max-width: 400px;
+  transition: background-color 0.3s ease;
+}
+
+.kanban-column:hover {
+  background-color: #c3aaf0;
+}
+
+.kanban-column h2 {
+  text-align: center;
+  border-bottom: 2px solid #6A0DAD;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
+  color: #6A0DAD;
+}
+
+.kanban-tasks {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.task-card {
+  background: #fff;
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s;
+  cursor: grab;
+}
+
+.task-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+
+.task-card:active {
+  cursor: grabbing;
+  transform: scale(1.03);
+}
+
+.task-card h3 {
+  margin: 0;
+  color: #6A0DAD;
+  margin-bottom: 0.5rem;
+}
+
+.task-meta {
+  font-size: 0.85rem;
+  color: #555;
+  margin-top: 0.5rem;
+  line-height: 1.4;
+}
+
+.task-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0.5rem;
+}
+
+.smart-assign-button,
+.delete-button {
+  flex: 1;
+  margin-right: 0.5rem;
+  padding: 0.4rem 0.6rem;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.smart-assign-button {
+  background-color: #6A0DAD;
+}
+
+.smart-assign-button:hover {
+  background-color: #5c0aa8;
+}
+
+.delete-button {
+  background-color: #e74c3c;
+}
+
+.delete-button:hover {
+  background-color: #c0392b;
+}
+
+.new-task-form {
+  background: #E8DFF5;
+  border-radius: 10px;
+  padding: 1rem;
+  margin: 1rem auto;
+  max-width: 500px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.new-task-form h2 {
+  text-align: center;
+  color: #6A0DAD;
+  margin-bottom: 1rem;
+}
+
+.new-task-form form {
+  display: flex;
+  flex-direction: column;
+}
+
+.new-task-form input,
+.new-task-form select,
+.new-task-form textarea {
+  margin: 0.5rem 0;
+  padding: 0.5rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+.new-task-form button {
+  padding: 0.5rem;
+  background-color: #6A0DAD;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 0.5rem;
+  transition: background-color 0.3s ease;
+}
+
+.new-task-form button:hover {
+  background-color: #5c0aa8;
+}
+
+.error-text {
+  color: #e74c3c;
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+}
+
+/* Activity Log Styling */
+.activity-log {
+  flex: 1;
+  min-width: 300px;
+  background: #E8DFF5;
+  border-radius: 10px;
+  padding: 1rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  height: 400px;
+  overflow-y: auto;
+}
+
+.activity-log h2 {
+  margin-bottom: 1rem;
+  color: #6A0DAD;
+  text-align: center;
+}
+
+.activity-log ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.activity-log li {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #d3c0eb;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+.activity-log li:last-child {
+  border-bottom: none;
+}
+
+.activity-log .timestamp {
+  display: block;
+  font-size: 0.8rem;
+  color: #666;
+  margin-top: 0.25rem;
+}
+
+.board-input {
+  background-color: #fff;
+  color: #333;
+}

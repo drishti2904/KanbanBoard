@@ -1,0 +1,68 @@
+.activity-log {
+  border: 1px solid #ddd;
+  padding: 1rem;
+  margin-top: 2rem;
+  border-radius: 8px;
+  background-color: #fff;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.activity-log h2 {
+  margin-bottom: 1rem;
+}
+
+.log-message {
+  color: #f0e5e5;
+}
+
+.log-list {
+  list-style: none;
+  padding: 0;
+}
+
+.log-item {
+  border-bottom: 1px solid #eee;
+  padding: 0.5rem 0;
+}
+
+.log-item:last-child {
+  border-bottom: none;
+}
+
+.log-timestamp {
+  font-size: 0.85rem;
+  color: #999;
+  margin-top: 0.25rem;
+}
+
+/*%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%*/
+
+.activity-log {
+  background-color: #E8DFF5;
+  padding: 1rem;
+  border-radius: 10px;
+  height: 400px;
+  overflow-y: auto;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.activity-log h2 {
+  color: #6A0DAD;
+  margin-bottom: 0.5rem;
+}
+
+.log-entry {
+  border-bottom: 1px solid #d3c0eb;
+  padding: 0.5rem 0;
+  font-size: 0.95rem;
+}
+
+.log-entry strong {
+  color: #6A0DAD;
+}
+
+.timestamp {
+  font-size: 0.8rem;
+  color: #666;
+}
