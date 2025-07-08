@@ -1,12 +1,33 @@
+Excellent! Let’s **update your README.md** by adding:
+
+✅ Your **YouTube demo link**
+✅ Your **live backend** and **frontend URLs**
+
+Here’s your updated README.md with those additions in appropriate sections (I've added a **Demo** section, and a **Live Deployment** section):
 
 ---
-#  Collaborative Kanban Board
+
+````markdown
+# Collaborative Kanban Board
 
 A real-time collaborative task board with Smart Assign and Conflict Handling features. Built using the MERN stack, this application enables teams to manage their tasks efficiently in a live, synchronized environment.
 
 ---
 
-##  Project Overview
+##  Demo Video
+
+Watch the live demo on YouTube: [https://youtu.be/tWOKMZv2V0M](https://youtu.be/tWOKMZv2V0M)
+
+---
+
+##  Live Deployment
+
+- **Frontend**: [https://kanban-board-gray-five.vercel.app](https://kanban-board-gray-five.vercel.app)
+- **Backend**: [https://kanbanboard-2-vopx.onrender.com](https://kanbanboard-2-vopx.onrender.com)
+
+---
+
+## Project Overview
 
 This is a collaborative Kanban board that allows multiple users to:
 - Manage tasks across different statuses (Todo, In Progress, Done)
@@ -16,7 +37,7 @@ This is a collaborative Kanban board that allows multiple users to:
 
 ---
 
-##  Tech Stack
+## Tech Stack
 
 ### Frontend
 - React.js
@@ -35,14 +56,14 @@ This is a collaborative Kanban board that allows multiple users to:
 
 ---
 
-##  Features
+## Features
 
--  User authentication (register/login with JWT)
--  Create and delete tasks
--  Drag-and-drop tasks between columns
--  Smart Assign: Auto-assigns task to user with fewest active tasks
--  Conflict Handling: Detects and handles concurrent task updates
--  Real-time updates via Socket.IO
+- User authentication (register/login with JWT)
+- Create and delete tasks
+- Drag-and-drop tasks between columns
+- Smart Assign: Auto-assigns task to user with fewest active tasks
+- Conflict Handling: Detects and handles concurrent task updates
+- Real-time updates via Socket.IO
 - Activity log tracking user actions
 
 ---
@@ -88,8 +109,7 @@ npm install
 npm run dev
 ```
 
-The frontend runs at:
-**[http://localhost:5173/](http://localhost:5173/)**
+The frontend runs at: **[http://localhost:5173/](http://localhost:5173/)**
 
 ---
 
@@ -103,15 +123,15 @@ npm run start
 
 ---
 
-##  Usage Guide
+## Usage Guide
 
-1.  Register or log in using your credentials.
-2.  Create a task using the form.
-3.  Use drag-and-drop to move tasks between columns.
-4.  Click "Smart Assign" to automatically assign the task.
-5.  Use "Delete" to remove a task.
-6.  Real-time updates appear instantly across all users.
-7.  View logs of all user activity in the Activity Log panel.
+1. Register or log in using your credentials.
+2. Create a task using the form.
+3. Use drag-and-drop to move tasks between columns.
+4. Click "Smart Assign" to automatically assign the task.
+5. Use "Delete" to remove a task.
+6. Real-time updates appear instantly across all users.
+7. View logs of all user activity in the Activity Log panel.
 
 ---
 
@@ -166,6 +186,6 @@ This ensures safe and informed task updates in a multi-user environment.
 
 ---
 
+```
 
-
-
+---
