@@ -4,15 +4,17 @@ const mongoose = require('mongoose');
 const cors = require('cors');
 const http = require('http');
 const { Server } = require('socket.io');
-const actionRoutes = require('./routes/actionRoutes');
 
-//  Create Express app
-const app = express();
-const server = http.createServer(app);
-
-// Import routes *after* app exists
+// Import routes
 const authRoutes = require('./routes/authRoutes');
 const taskRoutes = require('./routes/taskRoutes');
+const actionRoutes = require('./routes/actionRoutes');
+
+// ===========================
+// Create Express app & HTTP server
+// ===========================
+const app = express();
+const server = http.createServer(app);
 
 // ===========================
 // Socket.IO setup
@@ -20,18 +22,29 @@ const taskRoutes = require('./routes/taskRoutes');
 const io = new Server(server, {
   cors: {
     origin: process.env.FRONTEND_URL,
-    methods: ["GET", "POST"]
+    methods: ['GET', 'POST']
   }
 });
 app.set('io', io);
 
 // ===========================
+// CORS setup (fix for preflight)
+// ===========================
+const corsOptions = {
+  origin: process.env.FRONTEND_URL,
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization'],
+  credentials: true
+};
+
+// Enable CORS for all routes
+app.use(cors(corsOptions));
+// Handle preflight OPTIONS requests
+app.options('*', cors(corsOptions));
+
+// ===========================
 // Middleware
 // ===========================
-app.use(cors({
-  origin: process.env.FRONTEND_URL,
-  credentials: true
-}));
 app.use(express.json());
 
 // ===========================
@@ -47,7 +60,6 @@ app.get('/', (req, res) => {
 app.use('/auth', authRoutes);
 app.use('/tasks', taskRoutes);
 app.use('/actions', actionRoutes);
-// You can add /actions route later here
 
 // ===========================
 // Connect to MongoDB and start server
@@ -55,12 +67,12 @@ app.use('/actions', actionRoutes);
 mongoose.connect(process.env.MONGO_URL, {
   dbName: 'todo_board_db'
 })
-.then(() => {
-  console.log('MongoDB connected to todo_board_db');
-  server.listen(process.env.PORT, () => {
-    console.log(` Server running on port ${process.env.PORT}`);
+  .then(() => {
+    console.log('MongoDB connected to todo_board_db');
+    server.listen(process.env.PORT, () => {
+      console.log(`Server running on port ${process.env.PORT}`);
+    });
+  })
+  .catch(err => {
+    console.error('MongoDB connection error:', err);
   });
-})
-.catch(err => {
-  console.error(' MongoDB connection error:', err);
-});
