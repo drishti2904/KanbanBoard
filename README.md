@@ -1,13 +1,7 @@
-Excellent! Let’s **update your README.md** by adding:
-
-✅ Your **YouTube demo link**
-✅ Your **live backend** and **frontend URLs**
-
-Here’s your updated README.md with those additions in appropriate sections (I've added a **Demo** section, and a **Live Deployment** section):
 
 ---
 
-````markdown
+
 # Collaborative Kanban Board
 
 A real-time collaborative task board with Smart Assign and Conflict Handling features. Built using the MERN stack, this application enables teams to manage their tasks efficiently in a live, synchronized environment.
