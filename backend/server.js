@@ -57,9 +57,9 @@ app.get('/', (req, res) => {
 // ===========================
 // Routes
 // ===========================
-app.use('/auth', authRoutes);
-app.use('/tasks', taskRoutes);
-app.use('/actions', actionRoutes);
+app.use('/api/auth', authRoutes);
+app.use('/api/tasks', taskRoutes);
+app.use('/api/actions', actionRoutes);
 
 // ===========================
 // Connect to MongoDB and start server
