@@ -1,7 +1,7 @@
 
 ---
 
-````markdown
+
 # Collaborative Kanban Board
 
 A real-time collaborative task board with Smart Assign and Conflict Handling features. Built using the MERN stack, this application enables teams to manage their tasks efficiently in a live, synchronized environment.
