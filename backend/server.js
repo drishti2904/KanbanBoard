@@ -54,12 +54,19 @@ app.get('/', (req, res) => {
   res.send('API is running');
 });
 
+// Remove accidental double slashes
+app.use((req, res, next) => {
+  req.url = req.url.replace(/\/{2,}/g, '/');
+  next();
+});
+
+
 // ===========================
 // Routes
 // ===========================
-app.use('/auth', authRoutes);
-app.use('/tasks', taskRoutes);
-app.use('/actions', actionRoutes);
+app.use('/api/auth', authRoutes);
+app.use('/api/tasks', taskRoutes);
+app.use('/api/actions', actionRoutes);
 
 // ===========================
 // Connect to MongoDB and start server
